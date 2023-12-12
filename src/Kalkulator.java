@@ -1,6 +1,17 @@
 import java.util.Scanner;
 
 public class Kalkulator {
+
+    public static void desc() {
+        System.out.println("=========================================");
+        System.out.println("Program Kalkulator Sedeerhana");
+        System.out.println("+ : Melakukan Opeasi Penambahan");
+        System.out.println("- : Melakukan Opeasi Pengurangan");
+        System.out.println("* : Melakukan Opeasi Perkalian");
+        System.out.println("/ : Melakukan Opeasi Pembagian");
+        System.out.println("=========================================");
+
+    }
     public static int bil1(Scanner sc) {
         System.out.print("Masukkan bilangan pertama = ");
 
@@ -19,8 +30,8 @@ public class Kalkulator {
         return sc.next().charAt(0);
     }
 
-    public static int operasi(int bil1, int bil2, char op) {
-        int hasil = 0;
+    public static void operasi(int bil1, int bil2, char op) {
+        double hasil = 0;
 
         switch(op) {
             case '+':
@@ -34,27 +45,48 @@ public class Kalkulator {
                 break;
             case '/':
                 if (bil2 != 0) {
-                    hasil = bil1 / bil2;
+                    hasil = (double) bil1 / bil2;
                 } else {
-                    System.out.println("Error");
+                    System.out.println("Error, Anda Memasukkan angka 0!");
                 }
-            default:
-                System.out.println("Error");
         }
 
-        return hasil;
+        if ( bil2 != 0 ) {
+            System.out.println("Hasilnya adalah " + hasil);
+        }
+    }
+
+    public static int mainLagi(Scanner sc) {
+        System.out.println("=========================================");
+        System.out.println("Apakah anada ingin menncoba lagi (0/1) ? ");
+        System.out.println("0 : Tidak");
+        System.out.println("1 : Ya");
+        System.out.print("Pilihanmu = ");
+
+        return sc.nextInt();
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int inputBil1 = bil1(sc);
-        int inputBil2 = bil2(sc);
-        char inputOp = operator(sc);
+        boolean validasi = true;
 
-        int finalKalkulasi = operasi(inputBil1, inputBil2, inputOp);
+        while (validasi) {
+            desc();
 
-        System.out.println(finalKalkulasi);
+            int inputBil1 = bil1(sc);
+            int inputBil2 = bil2(sc);
+            char inputOp = operator(sc);
+
+            operasi(inputBil1, inputBil2, inputOp);
+
+            int inputMainLagi = mainLagi(sc);
+
+            if (inputMainLagi == 0) {
+                validasi = false;
+            }
+        }
+
         sc.close();
     }
 }
