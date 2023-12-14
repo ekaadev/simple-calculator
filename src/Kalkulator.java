@@ -3,14 +3,15 @@ import java.util.Scanner;
 public class Kalkulator {
 
     public static void desc() {
-        System.out.println("=========================================");
+        System.out.println("======================================================");
+        System.out.println("======================================================");
         System.out.println("Program Kalkulator Sedeerhana");
         System.out.println("+ : Melakukan Opeasi Penambahan");
         System.out.println("- : Melakukan Opeasi Pengurangan");
         System.out.println("* : Melakukan Opeasi Perkalian");
         System.out.println("/ : Melakukan Opeasi Pembagian");
-        System.out.println("=========================================");
-
+        System.out.println("======================================================");
+        System.out.println("======================================================");
     }
     public static int bil1(Scanner sc) {
         System.out.print("Masukkan bilangan pertama = ");
@@ -57,7 +58,7 @@ public class Kalkulator {
     }
 
     public static int mainLagi(Scanner sc) {
-        System.out.println("=========================================");
+        System.out.println("======================================================");
         System.out.println("Apakah anada ingin menncoba lagi (0/1) ? ");
         System.out.println("0 : Tidak");
         System.out.println("1 : Ya");
