@@ -6,7 +6,7 @@ public class Kalkulator {
         System.out.println("============================================================================================");
         System.out.println("Program Kalkulator Sederhana");
         System.out.println("============================================================================================");
-        System.out.println("Anda dapat menggunakan tanda di bawah ini untuk melakukan berbagai macam operasi matematika");
+        System.out.println("Anda dapat menggunakan tanda di bawah ini untuk melakukan 4 macam operasi matematika");
         System.out.println("'+' : Melakukan Opeasi Penjumlahan");
         System.out.println("'-' : Melakukan Opeasi Pengurangan");
         System.out.println("'*' : Melakukan Opeasi Perkalian");
